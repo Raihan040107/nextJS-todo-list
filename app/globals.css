@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "../styles/cmlabs-theme.css";
+
+/* sisa isi globals.css kamu yang lain */
 
 :root {
   --background: #ffffff;
