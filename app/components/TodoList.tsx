@@ -6,11 +6,11 @@ import { Todo } from "@/types/todo";
 
 type TodoListProps = {
   todos: Todo[];
-  onToggleTodo: (id: number) => void;
-  onDeleteTodo: (id: number) => void;
+  onToggle: (id: number) => void;
+  onDelete: (id: number) => void;
 };
 
-export default function TodoList({ todos, onToggleTodo, onDeleteTodo }: TodoListProps) {
+export default function TodoList({ todos, onToggle, onDelete }: TodoListProps) {
   if (todos.length === 0) {
     return (
       <div className="text-center p-8 text-gray-500 border-2 border-dashed border-gray-200 rounded-md">
@@ -29,7 +29,7 @@ export default function TodoList({ todos, onToggleTodo, onDeleteTodo }: TodoList
 
       <ul className="space-y-3">
         {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} onToggle={onToggleTodo} onDelete={onDeleteTodo} />
+          <TodoItem key={todo.id} todo={todo} onToggle={onToggle} onDelete={onDelete} />
         ))}
       </ul>
     </div>
